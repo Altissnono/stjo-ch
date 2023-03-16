@@ -1,10 +1,10 @@
 <?php
 // Informations d'identification
 
-define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', 'root');
-define('DB_NAME', 'projet');
+define('DB_SERVER', 'sql966.main-hosting.eu');
+define('DB_USERNAME', 'u150008834_stjo');
+define('DB_PASSWORD', 'OEJYt;q$X8');
+define('DB_NAME', 'u150008834_stjo');
  
 // Connexion a la base de donnees MySQL 
 

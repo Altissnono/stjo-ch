@@ -1,0 +1,135 @@
+/* ************************************** */
+/*           La SECTION HEADER           */
+/* ************************************** */
+
+.containerParent {
+    background-color: #1C2331;
+    color: #FFF;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.container span {
+    font-size: 18px;
+}
+
+.container a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.container a:hover {
+    text-decoration: underline;
+}
+/* ************************************** */
+/*           La SECTION HEADER           */
+/* ************************************** */
+
+.containerParent {
+    background-color: #1C2331;
+    color: #FFF;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.container span {
+    font-size: 18px;
+}
+
+.container a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.container a:hover {
+    text-decoration: underline;
+}
+
+
+/* ************************************** */
+/*           La SECTION BODY             */
+/* ************************************** */
+
+body {
+    background-color: #F4F4F4;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+#bloc_page {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+/* ************************************** */
+/*        La SECTION FORMULAIRE          */
+/* ************************************** */
+
+.box {
+    background-color: #FFF;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.box-title {
+    font-size: 28px;
+    margin-top: 0;
+}
+
+.box-input {
+    border-radius: 3px;
+    border: 1px solid #CCC;
+    box-sizing: border-box;
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+.box-button {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 3px;
+    color: #FFF;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+    padding: 10px 20px;
+}
+
+.box-register {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.box-register a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.box-register a:hover {
+    text-decoration: underline;
+}
+
+.errorMessage {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}

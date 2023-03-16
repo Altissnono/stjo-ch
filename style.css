@@ -1,49 +1,333 @@
-/* Style pour le tableau */
-
-
-
-  
-
-h1 {
-    text-align: center;
-  }
-
-
-th, td {
-    text-align: left;
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
+body {
+  background-color: #1a1a1a;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
 }
 
-tr:nth-child(even) {
-    background-color: #f2f2f2;
+.box {
+  background-color: #262626;
+  border-radius: 20px;
+  color: #fff;
+  margin: 100px auto;
+  max-width: 500px;
+  padding: 50px;
+  position: relative;
+}
+
+.box:before {
+  background-color: #262626;
+  border-radius: 10px;
+  content: "";
+  display: block;
+  height: 100%;
+  left: -10px;
+  position: absolute;
+  top: -10px;
+  transform: rotate(-10deg);
+  width: 100%;
+  z-index: -1;
+}
+
+.box:after {
+  background-color: #262626;
+  border-radius: 10px;
+  content: "";
+  display: block;
+  height: 100%;
+  right: -10px;
+  position: absolute;
+  top: -10px;
+  transform: rotate(10deg);
+  width: 100%;
+  z-index: -1;
+}
+
+.box-title {
+  font-size: 36px;
+  margin-bottom: 30px;
+  text-align: center;
+  text-shadow: 1px 1px #000;
+}
+
+.box-input {
+  background-color: #1a1a1a;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+}
+
+.box-input:focus {
+  outline: none;
+}
+
+.box-button {
+  background-color: #ffa500;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 18px;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+}
+
+.box-button:hover {
+  background-color: #ff8400;
+}
+
+.box-register {
+  font-size: 16px;
+  text-align: center;
+}
+
+.box-register a {
+  color: #ffa500;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.box-register a:hover {
+  color: #ff8400;
+}
+
+.errorMessage {
+  color: #ff0000;
+  font-size: 14px;
+  margin-top: 20px;
+  text-align: center;
+  text-shadow: 1px 1px #000;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px;
+  background-color: #262626;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table tr:nth-child(even) {
+  background-color: #353542;
+  color: #000;
+}
+
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  color: #fff;
 }
 
 th {
-    background-color: #d32e11;
-    color: white;
+  background-color: #000C71;
 }
 
-/* Style pour les boutons */
+tr:nth-child(odd) {
+  background-color: #1a1a1a;
+}
+
 button {
-    background-color: #cc380b;
-    border: none;
-    color: white;
-    padding: 8px 16px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
+  background-color: #1B98DA;
+  border: none;
+  color: #fff;
+  padding: 10px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease-in-out;
 }
 
 button:hover {
-    background-color: #e01010;
+background-color: #ff8400;
 }
 
-/* Style pour le formulaire de modification */
-form {
-    display: inline-block;
-    margin-right: 8px;
+/* Style pour les liens */
+a {
+color: #ffa500;
+text-decoration: none;
+}
+
+a:hover {
+color: #ff8400;
+}
+
+/* Style pour les messages d'erreur */
+.error {
+color: #ff0000;
+font-weight: bold;
+}
+
+/* Style pour les messages de succès */
+.success {
+color: #00ff00;
+font-weight: bold;
+}
+
+/* Style pour la barre de navigation */
+.navbar {
+background-color: #262626;
+overflow: hidden;
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 1;
+}
+
+.navbar a {
+float: left;
+display: block;
+color: #fff;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+.navbar a:hover {
+background-color: #ffa500;
+color: #fff;
+}
+
+.active {
+background-color: #ffa500;
+}
+
+/* Style pour la section principale */
+.main {
+margin-top: 80px;
+margin-bottom: 20px;
+padding: 0 20px;
+}
+
+/* Style pour les titres de section */
+.section-title {
+font-size: 36px;
+margin-bottom: 30px;
+text-align: center;
+text-shadow: 1px 1px #000;
+}
+
+/* Style pour les boutons d'action */
+.action-button {
+background-color: #ffa500;
+border: none;
+border-radius: 5px;
+color: #fff;
+cursor: pointer;
+display: inline-block;
+font-size: 18px;
+margin-top: 20px;
+padding: 10px;
+text-align: center;
+text-decoration: none;
+transition: background-color 0.3s ease-in-out;
+}
+
+.action-button:hover {
+background-color: #ff8400;
+}
+
+/* Style pour les formulaires */
+.form {
+background-color: #262626;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+color: #fff;
+margin: 20px auto;
+max-width: 500px;
+padding: 20px;
+}
+
+.form label {
+display: block;
+margin-bottom: 10px;
+}
+
+.form input[type="text"],
+.form input[type="password"],
+.form textarea {
+background-color: #1a1a1a;
+border: none;
+border-radius: 5px;
+color: #fff;
+display: block;
+font-size: 18px;
+margin-bottom: 20px;
+padding: 10px;
+width: 100%;
+}
+
+.form input[type="submit"] {
+background-color: #ffa500;
+border: none;
+border-radius: 5px;
+color: #fff;
+cursor: pointer;
+display: block;
+font-size: 18px;
+margin-top: 20px;
+padding: 10px;
+text-align: center;
+text-decoration: none;
+transition: background-color 0.3s ease-in-out;
+}
+
+.form input[type="submit"]:hover {
+background-color: #ff8400;
+}
+
+.form .error
+ 
+{
+color: red;
+}
+
+.form .success {
+color: green;
+}
+
+.form label {
+font-size: 1.2rem;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form textarea {
+width: 100%;
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+margin-top: 6px;
+margin-bottom: 16px;
+resize: vertical;
+font-size: 1rem;
+}
+
+.form textarea {
+height: 150px;
+}
+
+.form input[type="submit"] {
+background-color: #ffa500;
+border: none;
+color: #fff;
+cursor: pointer;
+font-size: 1.2rem;
+padding: 12px 24px;
+}
+
+.form input[type="submit"]:hover {
+background-color: #ff8400;
 }

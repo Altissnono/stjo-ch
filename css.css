@@ -1,103 +1,105 @@
-body{
-  background: url(fond4.jpg);
-  background-size: cover;
-  display: flex;
-  justify-content: center;
+body {
+	background-color: #1a1a1a;
+	font-family: 'Roboto', sans-serif;
 }
 
-
-nav {
-    background-color: #DDD;
-    margin: auto;
-    border: 3px solid red;
-	border-radius : 12px;
-    width: 980px;
+.box {
+	background-color: #262626;
+	border-radius: 20px;
+	color: #fff;
+	margin: 100px auto;
+	max-width: 500px;
+	padding: 50px;
+	position: relative;
 }
 
-.container {
-  display: flex;
-  justify-content: space-evenly;
-  }
-  
-  .titre {
-    padding: 10px 10px 10px 10px;
-    border: 1px solid black;
-  
-  }
-  .box {
-    border: 1px solid #c4c4c4;
-    border-radius: 20px;
-    padding: 30px 25px 10px 25px;
-    background: white;
-    margin: 110px auto;
-    width: 360px;
-  }
-  
-  
-  h1.box-logo a {
-    text-decoration:none;
-  }
-  h1.box-title {
-    color: #AEAEAE;
-    background: #f8f8f8;
-    font-weight: 300;
-    padding: 15px 25px;
-    line-height: 30px;
-    font-size: 25px;
-    text-align:center;
-    margin: -27px -26px 26px;
-    border-radius: 20px;
-  }
-  .box-button {
-    border-radius: 20px;
-    background: #005782;
-    text-align: center;
-    cursor: pointer;
-    font-size: 19px;
-    width: 100%;
-    height: 51px;
-    padding: 0;
-    color: #fff;
-    border: 0;
-    outline:0;
-  }
-  .box-register
-  {
-    text-align:center;
-    margin-bottom:0px;
-  }
-  .box-register a
-  {
-    text-decoration:none;
-    font-size:13px;
-    color:#666;
-  }
-  .box-input {
-    font-size: 14px;
-    background: #fff;
-    border: 1px solid #ddd;
-    margin-bottom: 25px;
-    padding-left:10px;
-    border-radius: 20px;
-    width: 347px;
-    height: 50px;
-  }
-  .box-input:focus {
-      outline: none;
-      border-color:#5c7186;
-  }
-  .sucess{
-    text-align: center;
-    color: white;
-  }
-  .sucess a {
-    text-decoration: none;
-    color: #58aef7;
-  }
-  p.errorMessage {
-      background-color: #e66262;
-      border: #AA4502 1px solid;
-      padding: 5px 10px;
-      color: #FFFFFF;
-      border-radius: 20px;
-  }
+.box:before {
+	background-color: #262626;
+	border-radius: 10px;
+	content: "";
+	display: block;
+	height: 100%;
+	left: -10px;
+	position: absolute;
+	top: -10px;
+	transform: rotate(-10deg);
+	width: 100%;
+	z-index: -1;
+}
+
+.box:after {
+	background-color: #262626;
+	border-radius: 10px;
+	content: "";
+	display: block;
+	height: 100%;
+	right: -10px;
+	position: absolute;
+	top: -10px;
+	transform: rotate(10deg);
+	width: 100%;
+	z-index: -1;
+}
+
+.box-title {
+	font-size: 36px;
+	margin-bottom: 30px;
+	text-align: center;
+	text-shadow: 1px 1px #000;
+}
+
+.box-input {
+	background-color: #1a1a1a;
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+	display: block;
+	font-size: 18px;
+	margin-bottom: 20px;
+	padding: 10px;
+	width: 100%;
+}
+
+.box-input:focus {
+	outline: none;
+}
+
+.box-button {
+	background-color: #ffa500;
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	font-size: 18px;
+	margin-bottom: 20px;
+	padding: 10px;
+	width: 100%;
+}
+
+.box-button:hover {
+	background-color: #ff8400;
+}
+
+.box-register {
+	font-size: 16px;
+	text-align: center;
+}
+
+.box-register a {
+	color: #ffa500;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.box-register a:hover {
+	color: #ff8400;
+}
+
+.errorMessage {
+	color: #ff0000;
+	font-size: 14px;
+	margin-top: 20px;
+	text-align: center;
+	text-shadow: 1px 1px #000;
+}
