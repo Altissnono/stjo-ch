@@ -275,49 +275,50 @@ void CVetoDlg::OnBnClickedExescan()
 		DCB dcbSerieParam = { 0 };
 		dcbSerieParam.DCBlength = sizeof(dcbSerieParam);
 
-		if (!GetCommState(OuvPort, &dcbSerieParam)) // Si impossible de récupérer les paramètres du port série 
+		if (!SetCommState(OuvPort, &dcbSerieParam)) // Si impossible de configurer le port série
 		{
+			DWORD dwLastError = GetLastError();
+			// Afficher un message d'erreur spécifique en fonction du code d'erreur renvoyé
+			if (dwLastError == ERROR_ACCESS_DENIED)
+			{
+				std::cerr << "Accès refusé. Vérifiez que le port est disponible et que vous avez les autorisations nécessaires." << std::endl;
+			}
+			else if (dwLastError == ERROR_FILE_NOT_FOUND)
+			{
+				std::cerr << "Le port série spécifié est introuvable." << std::endl;
+			}
+			else
+			{
+				std::cerr << "Erreur lors de la configuration du port série. Code d'erreur : " << dwLastError << std::endl;
+			}
 
 			CErreur Erreur;
 			Erreur.DoModal();
 			CloseHandle(OuvPort);
-
+		}
+		else if (ReadFile(OuvPort, buffer, sizeof(buffer), &bytesRead, NULL))
+		{
+			// Affichage des données lues
+			std::cout << "Donnees lues : " << buffer << std::endl;
+			CloseHandle(OuvPort);
 		}
 		else
 		{
-
-			dcbSerieParam.BaudRate = CBR_9600;
-			dcbSerieParam.ByteSize = 8;
-			dcbSerieParam.StopBits = ONESTOPBIT;
-			dcbSerieParam.Parity = NOPARITY;
-
-			if (!SetCommState(OuvPort, &dcbSerieParam)) // Si impossible de configurer le port série
+			DWORD dwLastError = GetLastError();
+			// Afficher un message d'erreur spécifique en fonction du code d'erreur renvoyé
+			if (dwLastError == ERROR_IO_DEVICE)
 			{
-
-				CErreur Erreur;
-				Erreur.DoModal();
-				CloseHandle(OuvPort);
-
-			}
-
-			// ----------------------------------------------------------------Lecture des données----------------------------------------------------------------------
-
-			if (ReadFile(OuvPort, buffer, sizeof(buffer), &bytesRead, NULL))
-			{
-				// Affichage des données lues
-				std::cout << "Donnees lues : " << buffer << std::endl;
-				CloseHandle(OuvPort);
+				std::cerr << "Erreur d'E/S avec le port série." << std::endl;
 			}
 			else
 			{
-				//std::cerr << "Erreur lors de la lecture des donnees." << std::endl;
-				CloseHandle(OuvPort);
-				CErreur Erreur;
-				Erreur.DoModal();
-
+				std::cerr << "Erreur lors de la lecture des données. Code d'erreur : " << dwLastError << std::endl;
 			}
+
+			CloseHandle(OuvPort);
+			CErreur Erreur;
+			Erreur.DoModal();
 		}
-	}
 		m_StopScan.EnableWindow(FALSE);
 		m_VoirFiche.EnableWindow(TRUE);
 		m_ExeScan.EnableWindow(TRUE);
