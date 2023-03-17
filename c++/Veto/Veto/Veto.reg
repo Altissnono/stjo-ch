@@ -1,0 +1,17 @@
+REGEDIT
+; Ce fichier .REG peut être utilisé par votre programme d'installation.
+;   Si aucun programme d'installation n'est disponible, les entrées suivantes sont
+;   automatiquement inscrites dans votre InitInstance via un appel à
+;   CWinApp::RegisterShellFileTypes et à COleObjectFactory::UpdateRegistryAll.
+
+
+HKEY_CLASSES_ROOT\Veto.Application = Veto Application
+
+
+HKEY_CLASSES_ROOT\Veto.Application\CLSID = {66022c41-b9f1-4483-9c9b-777abc557722}
+
+HKEY_CLASSES_ROOT\CLSID\{66022c41-b9f1-4483-9c9b-777abc557722} = Veto Application
+HKEY_CLASSES_ROOT\CLSID\{66022c41-b9f1-4483-9c9b-777abc557722}\ProgId = Veto.Application
+
+
+HKEY_CLASSES_ROOT\CLSID\{66022c41-b9f1-4483-9c9b-777abc557722}\LocalServer32 = Veto.EXE

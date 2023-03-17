@@ -1,0 +1,3 @@
+﻿  VetoDlg.cpp
+C:\Users\Bastien\Desktop\Veto\Veto\VetoDlg.cpp(244,6): warning C4101: 'dcb' : variable locale non référencée
+  Veto.vcxproj -> C:\Users\Bastien\Desktop\Veto\Debug\Veto.exe

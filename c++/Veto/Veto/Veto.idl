@@ -1,0 +1,29 @@
+// Veto.idl : source de la bibliothèque de types pour Veto.exe
+
+// Ce fichier va être traité par le compilateur MIDL pour générer la
+// bibliothèque de types (Veto.tlb).
+
+[ uuid(3fd9337f-2980-4ef3-8a0d-86c6653d83b9), version(1.0) ]
+library Veto
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	//  Interface de dispatch principale pour CVetoDoc
+
+	[ uuid(0fcb27e1-411e-4a20-853b-3b37b4c5beb3) ]
+	dispinterface IVeto
+	{
+		properties:
+
+		methods:
+	};
+
+	//  Informations sur la classe pour CVetoDoc
+
+	[ uuid(66022c41-b9f1-4483-9c9b-777abc557722) ]
+	coclass Veto
+	{
+		[default] dispinterface IVeto;
+	};
+};
