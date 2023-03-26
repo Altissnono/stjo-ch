@@ -1,2 +1,0 @@
-# stjo-ch
- stjo dev
